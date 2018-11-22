@@ -68,6 +68,8 @@ public class BackgroundFactory implements LayoutInflater.Factory {
                     ((RadioButton) view).setButtonDrawable(stateListDrawable);
                 } else if (view instanceof CheckBox) {
                     ((CheckBox) view).setButtonDrawable(stateListDrawable);
+                } else if (view instanceof ImageView) { // 适配图片点击事件，使scaleType生效
+                    ((ImageView) view).setImageDrawable(stateListDrawable);
                 } else {
                     view.setBackground(stateListDrawable);
                 }
